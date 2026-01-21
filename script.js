@@ -52,6 +52,7 @@ function loginUser() {
     } else {
         error.innerText = "Invalid mobile number or password!";
     }
+}
 
 function showDashboard(name) {
     loginScreen.classList.add("hidden");
@@ -96,4 +97,5 @@ function logoutUser() {
   document.getElementById("registerScreen").classList.remove("hidden");
     switchToRegister();
 }
-}
+
+
