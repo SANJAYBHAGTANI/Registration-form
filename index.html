@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo Data</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<link rel="stylesheet"  href="style.css">
+<script src="https://kit.fontawesome.com/80e3c71521.js" crossorigin="anonymous"></script>
+<body>
+<div class="container">
+  <div id="registerScreen">
+    <form>
+    <h2><i class="fa-solid fa-user"></i><br>Register</h2>
+    <input type="text" id="regName" placeholder="Full Name" required><br>
+    <input type="number" id="regMobile" placeholder="Mobile Number" required><br>
+    <input type="email" id="regEmail" placeholder="Email (optional)"><br>
+    <input type="password" id="regPassword" placeholder="Password" required><br>
+    <span id="regError" class="error"></span><br>
+    <button onclick="registerUser()">Register</button>
+    <p>Already have Account? <a href="#" onclick="switchToLogin()">Login</a></p>
+    </form>
+  </div>
+
+  <div id="loginScreen" class="hidden">
+    <h2><i class="fa-solid fa-user"></i><br>Login</h2>
+    <span id="logDone">Enter Mobile Num & Password<i class="fa-solid fa-thumbs-up"></i></span>
+    <input type="text" id="loginMobile" placeholder="Mobile Number"><br>
+    <input type="password" id="loginPassword" placeholder="Password"><br>
+    <span id="loginError" class="error"></span><br>
+    <button onclick="loginUser()">Login</button>
+    <p>New? <a href="#" onclick="switchToRegister()">Register</a></p>
+  </div>
+  
+  <div id="dashboardScreen" class="hidden">
+    <h2>Welcome!</h2>
+    <span id="welcomeMessage"></span><br>
+    <button onclick="logoutUser()">Logout</button>
+  </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
